@@ -18,12 +18,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="322df18f-0320-4bb5-a035-cc719fec20b3" name="Changes" comment="Converted string to char ** to int **. Need to find memory leaks&#10;Update README&#10;test">
+    <list default="true" id="322df18f-0320-4bb5-a035-cc719fec20b3" name="Changes" comment="ft_put_2d_matrix is working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +89,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;luiztest2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/nfs/homes/lbaron/core/fdf1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/nfs/homes/mrizakov/Desktop/Github 42 repo current/42/fdf2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -109,12 +106,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="&quot;42.fdf&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fdf_colab" TARGET_NAME="fdf_debug" CONFIG_NAME="fdf_debug" version="1" RUN_PATH="a.out">
+    <configuration name="fdf_debug" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="&quot;small.fdf&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fdf_colab" TARGET_NAME="fdf_debug" CONFIG_NAME="fdf_debug" version="1" RUN_PATH="a.out">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -143,7 +135,9 @@
       <workItem from="1689943776670" duration="2000" />
       <workItem from="1689944133493" duration="587000" />
       <workItem from="1689944791780" duration="1651000" />
-      <workItem from="1689948243389" duration="323000" />
+      <workItem from="1689948243389" duration="959000" />
+      <workItem from="1689949308891" duration="1023000" />
+      <workItem from="1689951596568" duration="1356000" />
     </task>
     <task id="LOCAL-00001" summary="added functions to measure the size of the map and malloc it as a 2d int array">
       <created>1689347003568</created>
@@ -176,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689697552141</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ft_put_2d_matrix is working">
+      <created>1689948646399</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689948646399</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +232,8 @@
     <MESSAGE value="added functions to measure the size of the map and malloc it as a 2d int array" />
     <MESSAGE value="Converted string to char ** to int **. Need to find memory leaks&#10;Update README" />
     <MESSAGE value="Converted string to char ** to int **. Need to find memory leaks&#10;Update README&#10;test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted string to char ** to int **. Need to find memory leaks&#10;Update README&#10;test" />
+    <MESSAGE value="ft_put_2d_matrix is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="ft_put_2d_matrix is working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -240,6 +242,11 @@
           <url>file://$PROJECT_DIR$/main.c</url>
           <line>36</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.c</url>
+          <line>124</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

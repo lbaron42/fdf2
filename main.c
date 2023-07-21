@@ -107,18 +107,38 @@ void	ft_put_2d_matrix(long color, void *param)
 
 //	ft_put_line(20, 20, 200, 400, color);
 
+// plot a 2d flat grid on screen
+//	while (row_start <= v->row )
+//	{
+//		ft_put_line(0 * offset, row_start * offset, v->col * offset, row_start * offset, color);
+//		row_start++;
+//	}
+//
+//	while (col_start <= v->col)
+//	{
+//		ft_put_line(col_start * offset, 0 * offset, col_start * offset,v->row * offset, color);
+//		col_start++;
+//	}
 
-	while (row_start <= v->row )
+	//
+
+	while (row_start < v->row)
 	{
-		ft_put_line(0 * offset, row_start * offset, v->col * offset, row_start * offset, color);
+		col_start = 0;
+		while (col_start < v->col )
+		{
+			printf("[");
+			printf("%d %d", row_start, col_start);
+			printf("%d ", v->matrix[row_start][col_start]);
+			printf("]");
+			col_start++;
+		}
+		printf("\n");
+
 		row_start++;
 	}
+exit(1);
 
-	while (col_start <= v->col)
-	{
-		ft_put_line(col_start * offset, 0 * offset, col_start * offset,v->row * offset, color);
-		col_start++;
-	}
 
 
 //	ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
@@ -148,6 +168,7 @@ void	ft_randomize(void *param)
 	//ft_put_pixel(x, y, color);
 //	ft_put_line(x, y, x_end, y_end, color);
 	ft_put_2d_matrix(color, param);
+
 
 //	mlx_put_pixel(image, x, y, 0xFF00FFFF);
 //
