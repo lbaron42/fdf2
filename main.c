@@ -105,19 +105,20 @@ void	ft_put_2d_matrix(long color, void *param)
 
 //	ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
 
-	ft_put_line(20, 20, 200, 400, color);
+//	ft_put_line(20, 20, 200, 400, color);
 
 
-//	while (row_start <= v->row )
-//	{
-//		ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
-//		row_start++;
-//	}
-//	while (row_start <= v->row)
-//	{
-//		ft_put_line(col_start * offset, row_start <= v->row, row_start * offset,v->row * offset, color);
-//		row_start++;
-//	}
+	while (row_start <= v->row )
+	{
+		ft_put_line(0 * offset, row_start * offset, v->col * offset, row_start * offset, color);
+		row_start++;
+	}
+
+	while (col_start <= v->col)
+	{
+		ft_put_line(col_start * offset, 0 * offset, col_start * offset,v->row * offset, color);
+		col_start++;
+	}
 
 
 //	ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
