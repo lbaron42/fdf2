@@ -32,31 +32,65 @@ void	ft_put_pixel(int32_t x, int32_t y, long color)
 
 // works by putting either vertical or horizontal lines only. Commented part of the code only prints out the diagonal line.
 // Have to use https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm to print out lines in any angle
+
+
 void	ft_put_line(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
 {
-	while (y <= y_end && x <= x_end)
-	{
-		ft_put_pixel(x, y, color);
-//		x++;
-//		y++;
+	float len_x;
+	float len_y;
+	int32_t big_size;
+	float dev;
+	float store_dev;
+	int flag;
 
-		if (y == y_end && x <= x_end)
+
+	len_x = x_end - x;
+	len_y = y_end - y;
+	if(len_x > len_y)
+	{
+		big_size = len_x;
+		dev = len_y / len_x;
+		store_dev = dev;
+		dev += y;
+		flag = 1;
+	}
+	else
+	{
+		big_size = len_y;
+		dev = len_x / len_y;
+		store_dev = dev;
+		dev += x;
+		flag = 0;
+	}
+	while(big_size--)
+	{
+		if(flag)
 		{
+			ft_put_pixel(x, y, color);
+			dev += store_dev;
 			x++;
+			y = dev;
 		}
-		if (x == x_end && y <= y_end)
+		else
 		{
+
+			ft_put_pixel(x,y,color);
+			dev += store_dev;
+			x = dev;
 			y++;
 		}
-//		else if (x <= x_end && y <= y_end)
-//		{
-//			x++;
-//			y++;
-//		}
-
-
 	}
 }
+
+void ft_put_line_any(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
+{
+	if(x_end > x && y_end > y)
+		ft_put_line(x_end, y_end, x, y, color);
+	else
+		ft_put_line(x, y, x_end, y_end, color);
+}
+
+
 void	ft_put_2d_matrix(long color, void *param)
 {
 //	int32_t x = 0;
@@ -71,7 +105,7 @@ void	ft_put_2d_matrix(long color, void *param)
 
 //	ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
 
-	ft_put_line(0, 0, 0, 100, color);
+	ft_put_line(20, 20, 200, 400, color);
 
 
 //	while (row_start <= v->row )
