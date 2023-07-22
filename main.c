@@ -12,7 +12,7 @@
 
 #include "fdf.h"
 
-#define WIDTH 512
+#define WIDTH 1024
 #define HEIGHT 512
 
 static	mlx_image_t	*image;
@@ -34,7 +34,7 @@ void	ft_put_pixel(int32_t x, int32_t y, long color)
 // Have to use https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm to print out lines in any angle
 
 
-void	ft_put_line(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
+void ft_put_line(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
 {
 	float len_x;
 	float len_y;
@@ -43,10 +43,23 @@ void	ft_put_line(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
 	float store_dev;
 	int flag;
 
+	// Check if the line should be drawn from right to left or bottom to top
+	if (x_end < x)
+	{
+		// Swap initial and final coordinates
+		int32_t temp = x;
+		x = x_end;
+		x_end = temp;
+
+		temp = y;
+		y = y_end;
+		y_end = temp;
+	}
 
 	len_x = x_end - x;
 	len_y = y_end - y;
-	if(len_x > len_y)
+
+	if (len_x > len_y)
 	{
 		big_size = len_x;
 		dev = len_y / len_x;
@@ -62,21 +75,28 @@ void	ft_put_line(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
 		dev += x;
 		flag = 0;
 	}
-	while(big_size--)
+
+	while (big_size--)
 	{
-		if(flag)
+		if (flag)
 		{
-			ft_put_pixel(x, y, color);
+			if (y >= 0 && y < HEIGHT && x >= 0 && x < WIDTH) // Check if x and y are within the screen boundaries
+				ft_put_pixel(x, y, color);
+
 			dev += store_dev;
 			x++;
-			y = dev;
+
+			// Round the y-coordinate to the nearest integer value
+			y = round(dev);
 		}
 		else
 		{
+			if (y >= 0 && y < HEIGHT && x >= 0 && x < WIDTH) // Check if x and y are within the screen boundaries
+				ft_put_pixel(x, y, color);
 
-			ft_put_pixel(x,y,color);
 			dev += store_dev;
-			x = dev;
+			x = round(dev);
+
 			y++;
 		}
 	}
@@ -90,95 +110,42 @@ void ft_put_line_any(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long co
 		ft_put_line(x, y, x_end, y_end, color);
 }
 
-
-void	ft_put_2d_matrix(long color, void *param)
+void ft_put_2d_matrix(long color, void *param)
 {
-//	int32_t x = 0;
-//	int32_t y = 0;
-//	int32_t x_end = 256;
-//	int32_t y_end = 256;
 	t_main *v = (t_main *)param;
-//	long color = 0xFF00FFFF;
 	int32_t offset = 20;
-	int32_t row_start = 0;
-	int32_t col_start = 0;
+	int32_t rs = 0;
+	int32_t cs;
+	int32_t startX = 300;
+	int32_t startY = 150;
 
-//	ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
-
-//	ft_put_line(20, 20, 200, 400, color);
-
-// plot a 2d flat grid on screen
-//	while (row_start <= v->row )
-//	{
-//		ft_put_line(0 * offset, row_start * offset, v->col * offset, row_start * offset, color);
-//		row_start++;
-//	}
-//
-//	while (col_start <= v->col)
-//	{
-//		ft_put_line(col_start * offset, 0 * offset, col_start * offset,v->row * offset, color);
-//		col_start++;
-//	}
-
-	//
-
-	while (row_start < v->row)
+	while (rs < v->row)
 	{
-		col_start = 0;
-		while (col_start < v->col )
+		cs = 0;
+		while (cs < v->col)
 		{
-			printf("[");
-			printf("%d %d", row_start, col_start);
-			printf("%d ", v->matrix[row_start][col_start]);
-			printf("]");
-			col_start++;
+			ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + (cs + 1) * offset, startY + rs * offset, color);
+			ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + cs * offset, startY + (rs + 1) * offset, color);
+			cs++;
 		}
-		printf("\n");
-
-		row_start++;
+		if (rs < v->row)
+			ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + cs * offset, startY + (rs + 1) * offset, color);
+		rs++;
 	}
-exit(1);
-
-
-
-//	ft_put_line(row_start * offset, col_start * offset, v->row * offset, v->col * offset, color);
-
-
-//	while (row_start <= v->row && col_start <= v->col)
-//	{
-////		ft_put_pixel(row_start * offset, col_start * offset, color);
-//		ft_put_line(row_start * offset, col_start * offset, v->row, v->col, color);
-//
-//		row_start++;
-//		col_start++;
-//	}
-//	ft_put_line(x, y, x_end, y_end, color);
+	cs = 0;
+	while (cs < v->col)
+	{
+		ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + (cs + 1) * offset, startY + rs * offset, color);
+		cs++;
+	}
 }
+
 
 void	ft_randomize(void *param)
 {
-	int32_t x = 0;
-	int32_t y = 0;
 	t_main *v = param;
-
-
-	int32_t x_end = 256;
-	int32_t y_end = 256;
-	long color = 0xFF00FFFF;
-	//ft_put_pixel(x, y, color);
-//	ft_put_line(x, y, x_end, y_end, color);
+	long color = 0xEDEADEFF;
 	ft_put_2d_matrix(color, param);
-
-
-//	mlx_put_pixel(image, x, y, 0xFF00FFFF);
-//
-//	for (int32_t i = 0; i < 1; ++i)
-//	{
-//		for (int32_t y = 0; y < 1; ++y)
-//		{
-//			mlx_put_pixel(image, i, y, 0xFF00FFFF);
-//		}
-//	}
 }
 
 void	ft_hook(void *param)
@@ -207,7 +174,7 @@ int32_t	init_mlx(mlx_t **mlx, t_main *v)
 		puts(mlx_strerror(mlx_errno));
 		return (EXIT_FAILURE);
 	}
-	if (!(image = mlx_new_image(*mlx, 512, 512)))
+	if (!(image = mlx_new_image(*mlx, 1024, 512)))
 	{
 		mlx_close_window(*mlx);
 		puts(mlx_strerror(mlx_errno));

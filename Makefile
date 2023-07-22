@@ -2,7 +2,7 @@
 
 
 LIBMLX = MLX42/build/libmlx42.a
-MLXFLAGS = -L/path/to/glfw/library -lglfw
+MLXFLAGS = -L/path/to/glfw/library -lglfw -lm
 CFLAGS = -Wall -Werror -Wextra -g3
 
 GNL_DIR = ./get_next_line/
