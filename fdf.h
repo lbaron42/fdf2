@@ -32,6 +32,8 @@ typedef struct s_main
 	float			sino;
 	mlx_t			*mlx;
 	long			color;
+	int32_t			startX;
+	int32_t			startY;
 }t_main;
 
 typedef struct s_data
