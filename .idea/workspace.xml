@@ -19,50 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="322df18f-0320-4bb5-a035-cc719fec20b3" name="Changes" comment="ft_put_2d_matrix is working">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/fdf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_atoi.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_atoi.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_bzero.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_bzero.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_calloc.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_calloc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_isalnum.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_isalnum.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_isalpha.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_isalpha.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_isascii.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_isascii.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_isdigit.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_isdigit.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_isprint.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_isprint.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_itoa.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_itoa.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_memchr.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_memchr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_memcmp.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_memcmp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_memcpy.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_memcpy.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_memmove.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_memmove.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_memset.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_memset.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_putchar_fd.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_putchar_fd.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_putendl_fd.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_putendl_fd.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_putnbr_fd.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_putnbr_fd.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_putstr_fd.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_putstr_fd.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_split.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_split.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strchr.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strchr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strdup.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strdup.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_striteri.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_striteri.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strjoin.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strjoin.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strlcat.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strlcat.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strlcpy.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strlcpy.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strlen.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strlen.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strmapi.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strmapi.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strncmp.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strncmp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strnstr.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strnstr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strrchr.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strrchr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_strtrim.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_strtrim.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_substr.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_substr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_tolower.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_tolower.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/obj/ft_toupper.o" beforeDir="false" afterPath="$PROJECT_DIR$/libft/obj/ft_toupper.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +87,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/lbaron/core/fdf3",
+    "last_opened_file_path": "/home/lbaron/core/3party_fdf",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -185,7 +142,7 @@
       <workItem from="1689949308891" duration="1023000" />
       <workItem from="1689951596568" duration="1356000" />
       <workItem from="1690024378661" duration="4894000" />
-      <workItem from="1690040458886" duration="4373000" />
+      <workItem from="1690040458886" duration="6488000" />
     </task>
     <task id="LOCAL-00001" summary="added functions to measure the size of the map and malloc it as a 2d int array">
       <created>1689347003568</created>
@@ -282,16 +239,5 @@
     <MESSAGE value="Converted string to char ** to int **. Need to find memory leaks&#10;Update README&#10;test" />
     <MESSAGE value="ft_put_2d_matrix is working" />
     <option name="LAST_COMMIT_MESSAGE" value="ft_put_2d_matrix is working" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>169</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
