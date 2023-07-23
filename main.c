@@ -78,51 +78,36 @@ void ft_put_2d_matrix(long color, void *param)
 	int32_t startY = 150;
 	float cos_sin;
 	int32_t isoX1, isoY1, isoX2, isoY2;
-	int32_t z1, z2;
+	int32_t z1, z2, z2_vertical;
 
 	set_offset(&offset, v);
 	cos_sin = 0.523599;
-	while (rs < v->row - 1)
+	while (rs < v->row)
 	{
 		cs = 0;
-		while (cs < v->col - 1)
+		while (cs < v->col)
 		{
 			z1 = v->matrix[rs][cs];
-			z2 = v->matrix[rs][cs + 1];
 			isoX1 = (startX + cs * offset - startY - rs * offset) * cos(cos_sin);
 			isoY1 = -z1 + (startX + cs * offset + startY + rs * offset) * sin(cos_sin);
-			isoX2 = (startX + (cs + 1) * offset - startY - rs * offset) * cos(cos_sin);
-			isoY2 = -z2 + (startX + (cs + 1) * offset + startY + rs * offset) * sin(cos_sin);
-			ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
-
-			z2 = v->matrix[rs + 1][cs];
-			isoX2 = (startX + cs * offset - startY - (rs + 1) * offset) * cos(cos_sin);
-			isoY2 = -z2 + (startX + cs * offset + startY + (rs + 1) * offset) * sin(cos_sin);
-			ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
+			if (cs < v->col - 1)
+			{
+				z2 = v->matrix[rs][cs + 1];
+				isoX2 = (startX + (cs + 1) * offset - startY - rs * offset) * cos(cos_sin);
+				isoY2 = -z2 + (startX + (cs + 1) * offset + startY + rs * offset) * sin(cos_sin);
+				ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
+			}
+			if (rs < v->row - 1)
+			{
+				z2_vertical = v->matrix[rs + 1][cs];
+				isoX2 = (startX + cs * offset - startY - (rs + 1) * offset) * cos(cos_sin);
+				isoY2 = -z2_vertical + (startX + cs * offset + startY + (rs + 1) * offset) * sin(cos_sin);
+				ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
+			}
 
 			cs++;
 		}
-		z1 = v->matrix[rs + 1][cs];
-		isoX1 = (startX + cs * offset - startY - rs * offset) * cos(cos_sin);
-		isoY1 = -z1 + (startX + cs * offset + startY + rs * offset) * sin(cos_sin);
-		z2 = v->matrix[rs + 1][cs];
-		isoX2 = (startX + cs * offset - startY - (rs + 1) * offset) * cos(cos_sin);
-		isoY2 = -z2 + (startX + cs * offset + startY + (rs + 1) * offset) * sin(cos_sin);
-		ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
 		rs++;
-	}
-
-	cs = 0;
-	while (cs < v->col - 1)
-	{
-		z1 = v->matrix[rs][cs];
-		z2 = v->matrix[rs][cs + 1];
-		isoX1 = (startX + cs * offset - startY - rs * offset) * cos(cos_sin);
-		isoY1 = -z1 + (startX + cs * offset + startY + rs * offset) * sin(cos_sin);
-		isoX2 = (startX + (cs + 1) * offset - startY - rs * offset) * cos(cos_sin);
-		isoY2 = -z2 + (startX + (cs + 1) * offset + startY + rs * offset) * sin(cos_sin);
-		ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
-		cs++;
 	}
 }
 
