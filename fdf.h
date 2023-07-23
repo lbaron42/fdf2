@@ -28,6 +28,10 @@ typedef struct s_main
 	int32_t 		col;
 	char			*buf;
 	int				**matrix;
+	float			cosn;
+	float			sino;
+	mlx_t			*mlx;
+	long			color;
 }t_main;
 
 typedef struct s_data
