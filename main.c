@@ -29,66 +29,30 @@ void	ft_put_pixel(int32_t x, int32_t y, long color)
 	mlx_put_pixel(image, x, y, color);
 }
 
-
-// works by putting either vertical or horizontal lines only. Commented part of the code only prints out the diagonal line.
-// Have to use https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm to print out lines in any angle
-
-
-void ft_put_line(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
+void ft_put_line(int32_t x0, int32_t y0, int32_t x1, int32_t y1, long color)
 {
-	float len_x;
-	float len_y;
-	int32_t big_size;
-	float dev;
-	float store_dev;
-	int flag;
+	int32_t dx = abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
+	int32_t dy = -abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
+	int32_t err = dx + dy, e2;
 
-	len_x = x_end - x;
-	len_y = y_end - y;
-	if (len_x > len_y)
+	while(1)
 	{
-		big_size = len_x;
-		dev = len_y / len_x;
-		store_dev = dev;
-		dev += y;
-		flag = 1;
-	}
-	else
-	{
-		big_size = len_y;
-		dev = len_x / len_y;
-		store_dev = dev;
-		dev += x;
-		flag = 0;
-	}
-
-	while (big_size--)
-	{
-		if (flag)
+		if (y0 >= 0 && y0 < HEIGHT && x0 >= 0 && x0 < WIDTH)
+			ft_put_pixel(x0, y0, color);
+		if (x0 == x1 && y0 == y1)
+			break;
+		e2 = 2 * err;
+		if (e2 >= dy)
 		{
-			if (y >= 0 && y < HEIGHT && x >= 0 && x < WIDTH)
-				ft_put_pixel(x, y, color);
-			dev += store_dev;
-			x++;
-			y = round(dev);
+			err += dy;
+			x0 += sx;
 		}
-		else
+		if (e2 <= dx)
 		{
-			if (y >= 0 && y < HEIGHT && x >= 0 && x < WIDTH)
-				ft_put_pixel(x, y, color);
-			dev += store_dev;
-			x = round(dev);
-			y++;
+			err += dx;
+			y0 += sy;
 		}
 	}
-}
-
-void ft_put_line_any(int32_t x, int32_t y, int32_t x_end, int32_t y_end, long color)
-{
-	if(x_end > x && y_end > y)
-		ft_put_line(x_end, y_end, x, y, color);
-	else
-		ft_put_line(x, y, x_end, y_end, color);
 }
 
 void set_offset(int32_t *offset, t_main *v)
@@ -98,10 +62,11 @@ void set_offset(int32_t *offset, t_main *v)
 	else if(v->row < 100 && v->col < 100)
 		*offset = (int32_t)25;
 	else if(v->row < 200 && v->col < 200)
-		*offset = (int32_t)20;
-	else if(v->row < 500 && v->col < 500)
+		*offset = (int32_t)5;
+	else if(v->row < 250 && v->col < 250)
 		*offset = (int32_t)5;
 }
+
 
 void ft_put_2d_matrix(long color, void *param)
 {
@@ -109,8 +74,10 @@ void ft_put_2d_matrix(long color, void *param)
 	int32_t offset;
 	int32_t rs = 0;
 	int32_t cs;
-	int32_t startX = 150;
+	int32_t startX = 500;
 	int32_t startY = 150;
+	int32_t isoX1, isoY1, isoX2, isoY2;
+	int32_t z1, z2;
 
 	set_offset(&offset, v);
 	while (rs < v->row - 1)
@@ -118,22 +85,43 @@ void ft_put_2d_matrix(long color, void *param)
 		cs = 0;
 		while (cs < v->col - 1)
 		{
-			ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + (cs + 1) * offset, startY + rs * offset, color);
-			ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + cs * offset, startY + (rs + 1) * offset, color);
+			z1 = v->matrix[rs][cs];
+			z2 = v->matrix[rs][cs + 1];
+			isoX1 = (startX + cs * offset - startY - rs * offset) * cos(0.523599);
+			isoY1 = -z1 + (startX + cs * offset + startY + rs * offset) * sin(0.523599);
+			isoX2 = (startX + (cs + 1) * offset - startY - rs * offset) * cos(0.523599);
+			isoY2 = -z2 + (startX + (cs + 1) * offset + startY + rs * offset) * sin(0.523599);
+			ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
+
+			z2 = v->matrix[rs + 1][cs];
+			isoX2 = (startX + cs * offset - startY - (rs + 1) * offset) * cos(0.523599);
+			isoY2 = -z2 + (startX + cs * offset + startY + (rs + 1) * offset) * sin(0.523599);
+			ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
+
 			cs++;
 		}
-		ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + cs * offset, startY + (rs + 1) * offset, color);
+		z2 = v->matrix[rs + 1][cs];
+		isoX1 = (startX + cs * offset - startY - rs * offset) * cos(0.523599);
+		isoY1 = -z1 + (startX + cs * offset + startY + rs * offset) * sin(0.523599);
+		isoX2 = (startX + cs * offset - startY - (rs + 1) * offset) * cos(0.523599);
+		isoY2 = -z2 + (startX + cs * offset + startY + (rs + 1) * offset) * sin(0.523599);
+		ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
 		rs++;
 	}
 
 	cs = 0;
 	while (cs < v->col - 1)
 	{
-		ft_put_line_any(startX + cs * offset, startY + rs * offset, startX + (cs + 1) * offset, startY + rs * offset, color);
+		z1 = v->matrix[rs][cs];
+		z2 = v->matrix[rs][cs + 1];
+		isoX1 = (startX + cs * offset - startY - rs * offset) * cos(0.523599);
+		isoY1 = -z1 + (startX + cs * offset + startY + rs * offset) * sin(0.523599);
+		isoX2 = (startX + (cs + 1) * offset - startY - rs * offset) * cos(0.523599);
+		isoY2 = -z2 + (startX + (cs + 1) * offset + startY + rs * offset) * sin(0.523599);
+		ft_put_line(isoX1, isoY1, isoX2, isoY2, color);
 		cs++;
 	}
 }
-
 
 void	ft_randomize(void *param)
 {
@@ -168,7 +156,7 @@ int32_t	init_mlx(mlx_t **mlx, t_main *v)
 		puts(mlx_strerror(mlx_errno));
 		return (EXIT_FAILURE);
 	}
-	if (!(image = mlx_new_image(*mlx, 1024, 512)))
+	if (!(image = mlx_new_image(*mlx, 1024, 812)))
 	{
 		mlx_close_window(*mlx);
 		puts(mlx_strerror(mlx_errno));
