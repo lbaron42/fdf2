@@ -35,7 +35,7 @@ all:$(NAME)
 
 $(NAME):$(OBJ)
 	@$(AR) $@ $^
-	@echo "$(GREEN)Library successfully created!$(NC)"
+	@echo "$(GREEN)Libft successfully created!$(NC)"
 	
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(OBJ_DIR)
@@ -47,7 +47,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(GREEN)Library cleaned!$(NC)"
+	@echo "$(GREEN)Libft cleaned!$(NC)"
 
 ct: fclean
 	@rm -f test

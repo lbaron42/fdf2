@@ -51,25 +51,30 @@ void	ft_my_commands(void *param)
 
 void	set_initial_coordinates(t_main *v)
 {
-	if (v->row < 10 && v->col < 10)
+	if (v->row <= 10 && v->col <= 10)
 	{
-		v->start_x = 550;
-		v->start_y = 50;
+		v->start_x = 350;
+		v->start_y = 0;
+	}
+	else if (v->row <= 20 && v->col <= 20)
+	{
+		v->start_x = 300;
+		v->start_y = -200;
 	}
 	else if (v->row < 50 && v->col < 50)
 	{
 		v->start_x = 300;
 		v->start_y = -300;
 	}
-	else if (v->row < 100 && v->col < 100)
+	else if (v->row <= 100 && v->col <= 100)
 	{
-		v->start_x = 550;
-		v->start_y = 50;
+		v->start_x = 300;
+		v->start_y = -250;
 	}
 	else if (v->row < 250 && v->col < 250)
 	{
 		v->start_x = 450;
-		v->start_y = 50;
+		v->start_y = -50;
 	}
 }
 

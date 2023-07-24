@@ -22,8 +22,8 @@
 # include "MLX42/include/MLX42/MLX42.h"
 # include "libft/libft.h"
 
-# define WIDTH 1024
-# define HEIGHT 812
+# define WIDTH 1280
+# define HEIGHT 1024
 
 typedef struct s_main
 {
