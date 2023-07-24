@@ -34,6 +34,8 @@ typedef struct s_main
 	long			color;
 	int32_t			startX;
 	int32_t			startY;
+	int32_t 		iso_flag;
+	int32_t			color_flag;
 }t_main;
 
 typedef struct s_data
@@ -53,6 +55,8 @@ typedef struct s_strm
 	char	**split2;
 	int		**matrix;
 }t_strm;
+
+#define BACKGROUND_COLOR = 0x000000FF
 
 //fdf_utils.c
 

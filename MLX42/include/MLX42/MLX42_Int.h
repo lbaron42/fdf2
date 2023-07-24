@@ -24,6 +24,7 @@
 # include <stdlib.h>
 # include <memory.h>
 # include <stdio.h>
+# include <string.h>
 # if defined(__linux__)
 #  include <linux/limits.h>
 # else

@@ -15,6 +15,7 @@
 # define FONT_WIDTH 10
 # define FONT_HEIGHT 20
 # include <stdint.h>
+# include <string.h>
 
 // GIMP RGBA C-Source image dump (font.c)
 static struct s_font
