@@ -11,9 +11,10 @@ GNL = $(GNL_DIR)gnl.a
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
+SRC= main.c fdf_utils.c fdf_utils2.c fdf_utils3.c matrix.c color.c draw.c
 
 all:name
-	cc -g3 main.c fdf_utils.c fdf_utils2.c $(LIBFT) $(LIBMLX) $(GNL) $(MLXFLAGS)
+	cc -g3 $(SRC) $(LIBFT) $(LIBMLX) $(GNL) $(MLXFLAGS)
 	
 name:
 	make -C $(LIBFT_PATH) all
