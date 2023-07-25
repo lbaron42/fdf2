@@ -85,6 +85,12 @@ typedef struct s_chcl2
 	uint8_t		a_new;
 }t_chcl2;
 
+typedef struct s_norm
+{
+	int32_t		y2;
+	long		color;
+}t_norm;
+
 //main.c
 
 void	ft_put_pixel(int32_t x, int32_t y, long color);
@@ -105,7 +111,7 @@ char	*retrieve_buf(const char *arg1);
 
 //draw.c
 
-void	ft_put_line(int32_t x0, int32_t y0, int32_t x1, int32_t y1, long color);
+void	ft_put_line(int32_t x1, int32_t y1, int32_t x2, t_norm *c);
 
 //fdf_utils3.c
 

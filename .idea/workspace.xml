@@ -19,15 +19,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="322df18f-0320-4bb5-a035-cc719fec20b3" name="Changes" comment="ft_put_2d_matrix is working">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42_Int.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42_Int.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MLX42/src/font/font.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/src/font/font.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MLX42/src/mlx_images.c" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/src/mlx_images.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/fdf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrix.c" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +148,8 @@
       <workItem from="1690188755647" duration="336000" />
       <workItem from="1690247104998" duration="29000" />
       <workItem from="1690247171364" duration="2911000" />
-      <workItem from="1690250635824" duration="1000" />
+      <workItem from="1690250635824" duration="2107000" />
+      <workItem from="1690253146247" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="added functions to measure the size of the map and malloc it as a 2d int array">
       <created>1689347003568</created>
