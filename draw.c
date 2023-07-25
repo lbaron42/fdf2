@@ -22,42 +22,42 @@ typedef struct s_putli
 	int32_t	e2;
 }t_putli;
 
-static void	put_line_loop(t_putli *v, int32_t *x0, int32_t *y0)
+static void	put_line_loop(t_putli *v, int32_t *x1, int32_t *y1)
 {
 	v->e2 = 2 * v->err;
 	if (v->e2 >= v->dy)
 	{
 		v->err += v->dy;
-		*x0 += v->sx;
+		*x1 += v->sx;
 	}
 	if (v->e2 <= v->dx)
 	{
 		v->err += v->dx;
-		*y0 += v->sy;
+		*y1 += v->sy;
 	}
 }
 
-void	ft_put_line(int32_t x0, int32_t y0, int32_t x1, int32_t y1, long color)
+void	ft_put_line(int32_t x1, int32_t y1, int32_t x2, int32_t y2, long color)
 {
 	t_putli	v;
 
-	v.dx = abs(x1 - x0);
-	v.dy = -abs(y1 - y0);
-	if (x0 < x1)
+	v.dx = abs(x2 - x1);
+	v.dy = -abs(y2 - y1);
+	if (x1 < x2)
 		v.sx = 1;
 	else
 		v.sx = -1;
-	if (y0 < y1)
+	if (y1 < y2)
 		v.sy = 1;
 	else
 		v.sy = -1;
 	v.err = v.dx + v.dy;
 	while (1)
 	{
-		if (y0 >= 0 && y0 < HEIGHT && x0 >= 0 && x0 < WIDTH)
-			ft_put_pixel(x0, y0, color);
-		if (x0 == x1 && y0 == y1)
+		if (y1 >= 0 && y1 < HEIGHT && x2 >= 0 && x2 < WIDTH)
+			ft_put_pixel(x1, y1, color);
+		if (x1 == x2 && y1 == y2)
 			break ;
-		put_line_loop(&v, &x0, &y0);
+		put_line_loop(&v, &x1, &y1);
 	}
 }

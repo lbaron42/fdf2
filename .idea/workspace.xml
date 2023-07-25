@@ -19,9 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="322df18f-0320-4bb5-a035-cc719fec20b3" name="Changes" comment="ft_put_2d_matrix is working">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fdf_linux" beforeDir="false" afterPath="$PROJECT_DIR$/fdf_linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42_Int.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42_Int.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MLX42/src/font/font.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/src/font/font.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MLX42/src/mlx_images.c" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/src/mlx_images.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +95,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/lbaron/core/3party_fdf&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/lbaron/core/fdf4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -141,6 +147,9 @@
       <workItem from="1690024378661" duration="4894000" />
       <workItem from="1690040458886" duration="34928000" />
       <workItem from="1690188755647" duration="336000" />
+      <workItem from="1690247104998" duration="29000" />
+      <workItem from="1690247171364" duration="2911000" />
+      <workItem from="1690250635824" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="added functions to measure the size of the map and malloc it as a 2d int array">
       <created>1689347003568</created>

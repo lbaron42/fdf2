@@ -31,10 +31,10 @@ typedef struct s_3d
 	int32_t	offset;
 	int32_t	rs;
 	int32_t	cs;
-	int32_t	isox1;
-	int32_t	isoy1;
-	int32_t	isox2;
-	int32_t	isoy2;
+	int32_t	x1;
+	int32_t	y1;
+	int32_t	x2;
+	int32_t	y2;
 	int32_t	z1;
 	int32_t	z2;
 	int32_t	z2_vertical;
@@ -42,27 +42,27 @@ typedef struct s_3d
 
 static void	ft_3d_loop(t_3d *n, t_main *v)
 {
-	n->isox1 = (v->start_x + n->cs * n->offset
+	n->x1 = (v->start_x + n->cs * n->offset
 			- v->start_y - n->rs * n->offset) * cos(v->cosn);
-	n->isoy1 = -n->z1 + (v->start_x + n->cs * n->offset
+	n->y1 = -n->z1 + (v->start_x + n->cs * n->offset
 			+ v->start_y + n->rs * n->offset) * sin(v->sino);
 	if (n->cs < v->col - 1)
 	{
 		n->z2 = v->matrix[n->rs][n->cs + 1];
-		n->isox2 = (v->start_x + (n->cs + 1) * n->offset
+		n->x2 = (v->start_x + (n->cs + 1) * n->offset
 				- v->start_y - n->rs * n->offset) * cos(v->cosn);
-		n->isoy2 = -n->z2 + (v->start_x + (n->cs + 1) * n->offset
+		n->y2 = -n->z2 + (v->start_x + (n->cs + 1) * n->offset
 				+ v->start_y + n->rs * n->offset) * sin(v->sino);
-		ft_put_line(n->isox1, n->isoy1, n->isox2, n->isoy2, v->color);
+		ft_put_line(n->x1, n->y1, n->x2, n->y2, v->color);
 	}
 	if (n->rs < v->row - 1)
 	{
 		n->z2_vertical = v->matrix[n->rs + 1][n->cs];
-		n->isox2 = (v->start_x + n->cs * n->offset
+		n->x2 = (v->start_x + n->cs * n->offset
 				- v->start_y - (n->rs + 1) * n->offset) * cos(v->cosn);
-		n->isoy2 = -n->z2_vertical + (v->start_x + n->cs * n->offset
+		n->y2 = -n->z2_vertical + (v->start_x + n->cs * n->offset
 				+ v->start_y + (n->rs + 1) * n->offset) * sin(v->sino);
-		ft_put_line(n->isox1, n->isoy1, n->isox2, n->isoy2, v->color);
+		ft_put_line(n->x1, n->y1, n->x2, n->y2, v->color);
 	}
 }
 
