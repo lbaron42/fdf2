@@ -63,7 +63,7 @@ char	*retrieve_buf(const char *arg1)
 	path = ft_strjoin(path, arg1);
 	fd = open(path, O_RDONLY);
 	rd = read(fd, buf, 100000);
-	if (rd == -1)
+	if (rd == (size_t)-1)
 	{
 		write(2, "error: invalid map\n", 20);
 		exit(0);

@@ -17,7 +17,7 @@ NC = \033[0m
 SRC= main.c fdf_utils.c fdf_utils2.c fdf_utils3.c matrix.c color.c draw.c
 
 all:name
-	@cc -g3 $(SRC) $(LIBFT) $(LIBMLX) $(GNL) $(MLXFLAGS)
+	@cc $(CFLAGS) $(SRC) $(LIBFT) $(LIBMLX) $(GNL) $(MLXFLAGS) -o fdf
 	@echo "$(GREEN)FDF ready to launch!$(NC)"
 	
 name:
@@ -28,10 +28,10 @@ clean:
 	@echo "$(RED)FDF is out of combat!$(NC)"
 
 fclean:clean
-	@rm a.out
+	@rm fdf
 
 norm:
-	norminette $(SRC)
+	norminette $(SRC) fdf.h
 
 re: fclean all
 

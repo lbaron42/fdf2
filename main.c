@@ -38,12 +38,14 @@ void	ft_hook(void *param)
 
 int32_t	init_mlx(mlx_t **mlx, t_main *v)
 {
-	if (!(*mlx = mlx_init(WIDTH, HEIGHT, "MLX42", true)))
+	*mlx = mlx_init(WIDTH, HEIGHT, "MLX42", true);
+	if (!*mlx)
 	{
 		puts(mlx_strerror(mlx_errno));
 		return (EXIT_FAILURE);
 	}
-	if (!(g_image = mlx_new_image(*mlx, 1024, 812)))
+	g_image = mlx_new_image(*mlx, 1024, 812);
+	if (!g_image)
 	{
 		mlx_close_window(*mlx);
 		puts(mlx_strerror(mlx_errno));
