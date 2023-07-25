@@ -21,7 +21,7 @@ void	set_offset(int32_t *offset, t_main *v)
 	else if (v->row < 50 && v->col < 50)
 		*offset = (int32_t)12;
 	else if (v->row < 100 && v->col < 100)
-		*offset = (int32_t)11;
+		*offset = (int32_t)10;
 	else if (v->row < 250 && v->col < 250)
 		*offset = (int32_t)4;
 }

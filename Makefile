@@ -1,4 +1,4 @@
-
+SHELL = /bin/zsh
 LIBMLX = MLX42/build/libmlx42.a
 MLXFLAGS = -L/path/to/glfw/library -lglfw -lm
 CFLAGS = -Wall -Werror -Wextra -g3
@@ -18,14 +18,14 @@ SRC= main.c fdf_utils.c fdf_utils2.c fdf_utils3.c matrix.c color.c draw.c
 
 all:name
 	@cc $(CFLAGS) $(SRC) $(LIBFT) $(LIBMLX) $(GNL) $(MLXFLAGS) -o fdf
-	@echo "$(GREEN)FDF ready to launch!$(NC)"
+	@echo "$(GREEN)FDF ready to launch \U1F680!$(NC)"
 	
 name:
 	@make --no-print-directory -C $(LIBFT_PATH) all
 	
 clean:
 	@make --no-print-directory -C $(LIBFT_PATH) fclean
-	@echo "$(RED)FDF is out of combat!$(NC)"
+	@echo "$(RED)FDF is out of combat \U1F44A!$(NC)"
 
 fclean:clean
 	@rm fdf

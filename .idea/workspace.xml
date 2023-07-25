@@ -24,8 +24,8 @@
       <change beforePath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42_Int.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/include/MLX42/MLX42_Int.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MLX42/src/font/font.h" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/src/font/font.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MLX42/src/mlx_images.c" beforeDir="false" afterPath="$PROJECT_DIR$/MLX42/src/mlx_images.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/draw.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/fdf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fdf_utils3.c" beforeDir="false" afterPath="$PROJECT_DIR$/fdf_utils3.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matrix.c" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +111,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="fdf_debug" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="&quot;plat.fdf&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fdf_colab" TARGET_NAME="fdf_debug" CONFIG_NAME="fdf_debug" version="1" RUN_PATH="a.out">
+    <configuration name="fdf_debug" type="CLionNativeAppRunConfigurationType" nameIsGenerated="true" PROGRAM_PARAMS="&quot;mars.fdf&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fdf_colab" TARGET_NAME="fdf_debug" CONFIG_NAME="fdf_debug" version="1" RUN_PATH="fdf">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -149,7 +149,8 @@
       <workItem from="1690247104998" duration="29000" />
       <workItem from="1690247171364" duration="2911000" />
       <workItem from="1690250635824" duration="2107000" />
-      <workItem from="1690253146247" duration="817000" />
+      <workItem from="1690253146247" duration="2477000" />
+      <workItem from="1690275945559" duration="2308000" />
     </task>
     <task id="LOCAL-00001" summary="added functions to measure the size of the map and malloc it as a 2d int array">
       <created>1689347003568</created>

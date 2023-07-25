@@ -83,8 +83,8 @@ void	variables_initialising(t_main *v)
 	v->row = 0;
 	v->col = 0;
 	v->matrix = str_to_matrix(v->buf, &v->row, &v->col);
-	v->cosn = 0.623599;
-	v->sino = 0.623599;
+	v->cosn = 0.523599;
+	v->sino = 0.523599;
 	v->color = 0xEDEADEFF;
 	v->iso_flag = 1;
 	v->color_flag = 1;
